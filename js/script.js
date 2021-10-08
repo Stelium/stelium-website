@@ -23,15 +23,15 @@ $(document).ready(function(){
 		$('section.model_list .planet_2').attr('style','transform: translate('+ax+'px,'+ay+'px);transition:none;');
 		$('section.model_list .planet_3').attr('style','transform: translate('+ax/2+'px,'+ay/2+'px);transition:none;');
 	});
-	
+
 	$('.content_form form').each(function(){
 		var $form = $(this),
 			$submit=$form.find('button[type="submit"]').addClass('disabled');
-		
+
 		$form.find('.js_required, .js_email').on('input',function(){
 			var $field=$(this);
 				$field.wrapper = $field.closest('.col')
-			
+
 			if($field.val() == ''){
 				$field.wrapper.removeClass('valid').addClass('invalid');
 			}else{
@@ -45,7 +45,7 @@ $(document).ready(function(){
 					$field.wrapper.removeClass('invalid').addClass('valid');
 				}
 			}
-			
+
 			if($form.find('.js_required, .js_email').length == $form.find('.valid').length){
 				$submit.removeClass('disabled');
 			} else {
@@ -55,13 +55,13 @@ $(document).ready(function(){
 	});
 	$('#contact_form').on('submit', function(event){
 		event.preventDefault();
-		
+
 		var $t=$(this);
 			$t.msg=$t.find('.js_message');
 			$t.sbmt=$t.find('.js_submit');
 
 		if($t.find('.js_required, .js_email').length != $t.find('.valid').length) return;
-		
+
 		$.ajax({
 			type: $t.attr('method'),
 			url: $t.attr('action'),
@@ -89,16 +89,16 @@ $(document).ready(function(){
 		}
 		$t.find('.button_p a').on('click',function(e){
 			e.preventDefault();
-			
+
 			var st=$(document).scrollTop();
-			
+
 			$t.n_all.slideDown(300);
-			
+
 			$(document).scrollTop(st)
 			$(this).closest('.button_p').fadeOut(300);
 		});
 	});
-	
+
 	AOS.init({
 		once: true
 	});
@@ -113,5 +113,5 @@ $(window).on('load',function(){
 
 function validateEmail(str) {
 	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-	return reg.test(str);	
-}	
+	return reg.test(str);
+}

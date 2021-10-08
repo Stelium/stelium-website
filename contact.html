@@ -122,7 +122,7 @@
 						<div class="col col-12">
 							<div class="js_submit">
 								<!--button type="submit" class="button_alt">Send</button-->
-								<button type="submit" class="button_alt g-recaptcha" data-sitekey="6Lda-34cAAAAAKv1eory9sMx8VU1Bn-dAs6Ub1e1" data-callback="onSubmit" data-action="submit">Send</button>
+								<button type="submit" class="button_alt g-recaptcha" data-sitekey="6Lda-34cAAAAAKv1eory9sMx8VU1Bn-dAs6Ub1e1" data-callback="onSubmit" onclick="onSubmit()" data-action="submit">Send</button>
 							</div>
 							<div class="js_message">
 								<div class="message">Message sent</div>
@@ -130,7 +130,7 @@
 						</div>
 					</form>
 					<script>
-						function onSubmit(token) {
+						function onSubmit() {
 							$('#contact_form').submit();
 							//document.getElementById("contact_form").submit();
 						}
