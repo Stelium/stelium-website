@@ -1,435 +1,76 @@
-<!DOCTYPE HTML>
-<html lang="nl">
-<head>
-<title></title>
-<meta charset="utf-8">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Stelium</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
-<meta name="msapplication-config" content="browserconfig.xml" />
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:image" content="og-image.png"/>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="_assets/normalize.css">
+        <link rel="stylesheet" type="text/css" href="_assets/wiresphere.css">
+        <link rel="stylesheet" type="text/css" href="_assets/font-awesome-4.5.0/css/font-awesome.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/api.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
 
-<link type="text/css" rel="stylesheet" href="./css/libs.css">
-<link type="text/css" rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
 
-<script defer="defer" type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
-<script defer="defer" type="text/javascript" src="./js/aos.js"></script>
-<script defer="defer" type="text/javascript" src="./js/script.js"></script>
 
-</head>
-<body>
-	<div id="page">
-		<header data-aos="fade-in">
-			<div class="container">
-				<div class="row">
-					<div class="col col-6 col-lg-2">
-						<a href="/" class="logo d-none d-lg-inline-block">
-							<img src="img/logo.svg">
-						</a>
-						<a href="/" class="logo d-inline-block d-lg-none">
-							<img src="img/logo-mobile.svg">
-						</a>
-					</div>
-					<div class="col col-6 col-lg-10 d-flex">
-						<a href="#" class="nav_trigger d-lg-none"></a>
-						<div class="nav_wrapper">
-							<nav>
-								<ul>
-									<li><a href="./team.html">Team</a></li>
-									<li><a href="./careers.html">Careers</a></li>
-									<li><a href="https://medium.com/@Stelium" target="_blank">Blog</a></li>
-									<li><a href="./contact.html">Contact</a></li>
-								</ul>
-							</nav>
+<!-- Button, Input -->
+		<div class="preloader" id="preloader">
 
-							<a href="#" class="button_alt">Download investor Deck</a>
-							<div class="social">
-								<a href="#" target="_blank">
-									<svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1.27111 0H19.7287C19.739 0.008484 19.7485 0.0216327 19.7604 0.0250263C20.6177 0.279546 20.9999 0.802585 20.9999 1.72183C20.9999 7.80372 20.9999 13.8855 20.9999 19.9671C21.0035 20.0938 20.9971 20.2207 20.9805 20.3463C20.8466 21.1629 20.2367 21.6779 19.4045 21.6779C13.4713 21.6779 7.53818 21.6779 1.60523 21.6779C1.55755 21.6779 1.50947 21.6779 1.4618 21.6779C1.15237 21.6664 0.853809 21.5572 0.60638 21.3651C0.358952 21.1729 0.174563 20.9071 0.0780842 20.6034C0.0530154 20.5245 0.0263017 20.446 0 20.3671V1.31247C0.0973985 0.973112 0.208359 0.633752 0.493157 0.421652C0.729461 0.248154 1.01015 0.138289 1.27111 0ZM11.4219 8.45897H8.87395V16.3665H11.4219C11.4219 15.6789 11.4219 15.009 11.4219 14.3396C11.4248 13.451 11.4182 12.5618 11.4421 11.674C11.456 11.1649 11.7269 10.7798 12.1432 10.5244C12.8895 10.0663 13.7718 10.423 14.0024 11.2837C14.075 11.577 14.1105 11.8787 14.108 12.1813C14.1191 13.5002 14.1129 14.8194 14.1129 16.1387V16.3741H16.6572C16.6613 16.3029 16.6687 16.2413 16.6687 16.1798C16.6687 14.7337 16.6716 13.2876 16.6662 11.842C16.664 11.5529 16.6455 11.2643 16.6108 10.9774C16.4295 9.43166 15.5344 8.45685 14.0911 8.28123C13.0465 8.15397 12.1596 8.47763 11.5341 9.39984C11.5115 9.43293 11.4848 9.46305 11.4244 9.53983L11.4219 8.45897ZM7.43845 16.3775C7.44338 16.3211 7.44996 16.2799 7.44996 16.2392C7.44996 13.6994 7.45119 11.1596 7.45366 8.61974C7.45366 8.45982 7.39037 8.43606 7.25886 8.43691C6.53433 8.44157 5.8098 8.43691 5.08527 8.43988C5.02568 8.43988 4.96609 8.44836 4.90157 8.45345V16.3775H7.43845ZM6.19775 4.61529C5.59528 4.61275 5.10623 4.89272 4.87691 5.37122C4.79525 5.53801 4.74783 5.72041 4.73763 5.90699C4.72743 6.09358 4.75466 6.28033 4.81762 6.45554C4.88059 6.63076 4.97792 6.79067 5.10353 6.92526C5.22914 7.05985 5.38032 7.16622 5.5476 7.2377C6.34981 7.58385 7.29502 7.20461 7.54448 6.43596C7.84983 5.49975 7.19927 4.61911 6.19857 4.61529H6.19775Z"/>
-									</svg>
-
-								</a>
-								<a href="#" target="_blank">
-									<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16.4369 0.0644531H17.3409C17.3597 0.0770395 17.3803 0.0864553 17.4019 0.0923467C18.5233 0.231321 19.4857 0.711112 20.2898 1.54354C20.335 1.59081 20.4534 1.60074 20.5289 1.58419C21.449 1.38491 22.3343 1.03827 23.1533 0.556538C23.2071 0.524867 23.2663 0.50265 23.3585 0.461998C22.9924 1.60783 22.3279 2.45681 21.4148 3.11812C22.3008 3.03539 23.1325 2.76311 23.9999 2.40055C23.4326 3.27174 22.8174 4.01294 22.0599 4.60524C21.7543 4.84395 21.5627 5.08125 21.6589 5.49392C21.6775 5.5757 21.6625 5.66598 21.6589 5.75249C21.5987 8.47053 20.8733 10.9779 19.483 13.2746C16.4888 18.2295 11.392 20.2834 6.17491 19.5261C4.63968 19.2985 3.15653 18.7822 1.7972 18.0021C1.526 17.8485 1.26428 17.6774 0.998047 17.5143C4.34879 17.8419 6.96728 16.2824 7.83965 15.4315C5.7229 15.2269 4.28958 14.0886 3.51122 12.0456C3.88232 12.0456 4.21861 12.0602 4.5531 12.0413C4.8799 12.0229 5.2049 11.9699 5.53034 11.9321C2.9679 11.207 1.77505 8.82316 1.86229 7.01602C2.18999 7.14554 2.51047 7.29964 2.84586 7.39796C3.18125 7.49628 3.53517 7.53457 3.88096 7.59933L3.89045 7.53552C1.48034 5.69198 1.53684 2.6109 2.53804 1.00371C5.09416 4.14104 8.32376 5.87775 12.2621 6.15192C12.2345 5.79928 12.2002 5.49013 12.1875 5.17531C12.1007 3.08455 13.3587 1.11007 15.2454 0.396291C15.6309 0.24739 16.0396 0.172229 16.4369 0.0644531Z"/>
-									</svg>
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
+			</g>
+			</svg>
+		</div>
+		<div class="stage">
+			<div class="backgroundStack" id="backgroundStack">
+				<div class="backgroundStack-solidColor" id="backgroundStack-solidColor"></div>
+				<div class="backgroundStack-pic" id="backgroundStack-pic"></div>
+				<canvas class="backgroundStack-gradient" id="backgroundStack-gradient"></canvas>
+				<div class="backgroundStack-3d" id="backgroundStack-3d"></div>
+				<div class="backgroundStack-noise" id="backgroundStack-noise"></div>
 			</div>
-		</header>
-		<main>
-			<section class="intro_text">
-				<div class="container">
-					<div class="row">
-						<div class="col col-12">
-							<h1 data-aos="fade-up">Raise Faster. Build Better. <br />Accelerate Adoption.</h1>
-						</div>
-						<div class="col col-md-7">
-							<p data-aos="fade-up">Stelium is a distributed systems development studio focused on <br />private Web3 technology.</p>
-							<p data-aos="fade-up"><a href="./contact.html" class="button">Contact us</a></p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="model_list">
-				<i class="planet_1"></i>
-				<i class="planet_2"></i>
-				<i class="planet_3"></i>
-				<div class="intro">
-					<div class="container">
-						<div class="row">
-							<div class="col col-10 offset-1 offset-lg-0" data-aos="fade-up">
-								<p>We are a team of cryptography pioneers, entrepreneurs, engineers, privacy and security experts that partner with Web3 founders, startups and enterprises building distributed infrastructure and applications to <strong>create new privacy  enabled products and services.</strong></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="model_list list">
-				<div class="container">
-					<div class="row">
-						<div class="col col-lg-6">
-							<h2 data-aos="fade-up">Our Model</h2>
-							<p data-aos="fade-up"><strong>We accelerate the next generation of DeFi products by bringing privacy technology to public blockchains, enterprises and governments.</strong></p>
-						</div>
-					</div>
-					<div class="row list">
-						<div class="col col-12 col-sm-6 col-lg-3" data-aos="fade-up">
-							<div class="item">
-								<div class="logo_wrapper d-xl-block">
-									<div class="static_logo d-xl-none">
-										<img src="img/logo-1.svg">
-									</div>
-									<div class="animated_logo type_1 d-none d-xl-block">
-										<div class="wrapper">
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-											<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-										</div>
-									</div>
-								</div>
-								<h4>Thesis <br />Driven</h4>
-								<p>A privacy first approach to DeFi and Web3, with conviction that fullscale adoption can only happen when transactional privacy is preserved by default.</p>
-							</div>
-						</div>
-						<div class="col col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-							<div class="item">
-								<div class="logo_wrapper d-xl-block">
-									<div class="static_logo d-xl-none">
-										<img src="img/logo-2.svg">
-									</div>
-									<div class="animated_logo type_2 d-none d-xl-block">
-										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-										<span class="mask"></span>
-									</div>
-								</div>
-								<h4>In-house <br />Expertise</h4>
-								<p>A team of world-class experts enables founding teams to get from ideation to traction and commercialization success.</p>
-							</div>
-						</div>
-						<div class="col col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-							<div class="item">
-								<div class="logo_wrapper d-xl-block">
-									<div class="static_logo d-xl-none">
-										<img src="img/logo-3.svg">
-									</div>
-									<div class="animated_logo type_3 d-none d-xl-block">
-										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-									</div>
-								</div>
-								<h4>Acceleration</h4>
-								<p>Participation in select blockchain projects by providing advisory services, operational playbooks and product risk controls to accelerate growth and mitigate risks.</p>
-							</div>
-						</div>
-						<div class="col col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-							<div class="item">
-								<div class="logo_wrapper d-xl-block">
-									<div class="static_logo d-xl-none">
-										<img src="img/logo-4.svg">
-									</div>
-									<div class="animated_logo type_4 d-none d-xl-block">
-										<img src="img/logo-4.svg">
-									</div>
-								</div>
-								<h4>Incubation&nbsp;& Decentralization</h4>
-								<p>Strong development, product design, commercialization  and marketing capabilities allow us to incubate, co-develop launch and decentralize  projects with select teams.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="right_text">
-				<div class="container">
-					<div class="row">
-						<div class="col col-12 col-md-6 offset-md-6">
-							<h2 data-aos="fade-up">There’s&nbsp;no&nbsp;Web3 without privacy</h2>
-							<p data-aos="fade-up">Teams  are typically laser focused on achieving product market fit and scale fast. There’s massive shortage of blockchain engineers with ZKP expertise. If privacy becomes an afterthought, instead of building the future of finance, Web3 becomes the backbone of surveillance capitalism.</p>
-						</div>
-					</div>
-				</div>
-				<div class="line_planets_deco">
-					<i class="line" data-aos="lines-anim-1" data-aos-delay="500"></i>
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<i class="planet_1" data-aos="fade-up"></i>
-								<i class="planet_2" data-aos="fade-up" data-aos-delay="100"></i>
-								<i class="planet_3" data-aos="fade-up" data-aos-delay="200"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="solutions">
-				<div class="container">
-					<div class="row">
-						<div class="col col-12 col-md-6">
-							<h2 data-aos="fade-up">Our Solutions</h2>
-							<p data-aos="fade-up">We align teams, communities, ecosystems and capital, co-developing products and protocols with joint equity and token ownership, managing delivery cycles and participating in early investment rounds.</p>
-						</div>
-					</div>
-					<div class="row list">
-						<div class="col col-6 col-lg-3" data-aos="fade-up">
-							<div class="item">
-								<div class="logo" data-aos="fade-in" data-aos-delay="200">
-									<svg width="94" viewBox="0 0 518 351" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<circle cx="97" cy="101" r="97" stroke="#30A86F" stroke-width="7"/>
-										<circle cx="97" cy="250" r="97" stroke="#30A86F" stroke-width="7"/>
-										<circle cx="257" cy="101" r="97" stroke="#30A86F" stroke-width="7"/>
-										<circle cx="257" cy="250" r="97" stroke="#30A86F" stroke-width="7"/>
-										<circle cx="417" cy="101" r="97" stroke="#30A86F" stroke-width="7"/>
-										<circle cx="417" cy="250" r="97" stroke="#30A86F" stroke-width="7"/>
-									</svg>
+			<!--<img src="_pics/logo.png" alt="Wiresphere" class="stage-logo" /> -->
+			<div class="stage-header">
+        <img src="_pics/logo.png" alt="Stelium" class="himg" />
+        <br>
+				<!--<h1 style="font-family: 'DM Mono', monospace;">Advanced software development</h1>
+        <h2 style="font-family: 'DM Mono', monospace;">for the blockchain age</h2>-->
 
-								</div>
-								<h4>Entrepreneurial <br />Team</h4>
-								<p>Experienced technical, commercial, marketing and product  team with proven track record.</p>
-							</div>
-						</div>
-						<div class="col col-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-							<div class="item">
-								<div class="logo" data-aos="fade-in" data-aos-delay="250">
-									<svg width="71" viewBox="0 0 397 469" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 121.332L198.928 7.55292L390.147 122.815L200.411 236.594L0 121.332Z" stroke="#AE47F7" stroke-width="7"/>
-										<path d="M0 177.332L198.928 63.5529L390.147 178.815L200.411 292.594L0 177.332Z" stroke="#AE47F7" stroke-width="7"/>
-										<path d="M0 233.332L198.928 119.553L390.147 234.815L200.411 348.594L0 233.332Z" stroke="#AE47F7" stroke-width="7"/>
-										<path d="M0 289.332L198.928 175.553L390.147 290.815L200.411 404.594L0 289.332Z" stroke="#AE47F7" stroke-width="7"/>
-										<path d="M0 345.332L198.928 231.553L390.147 346.815L200.411 460.594L0 345.332Z" stroke="#AE47F7" stroke-width="7"/>
-									</svg>
-								</div>
-								<h4>Architecture&nbsp;& Engineering</h4>
-								<p>State of the art expertise with combined 70+ years of protocol design experience.</p>
-							</div>
-						</div>
-						<div class="col col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-							<div class="item">
-								<div class="logo" data-aos="fade-in" data-aos-delay="300">
-									<svg width="112" viewBox="0 0 613 391" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<circle cx="417.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="380.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="343.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="306.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="269.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="232.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-										<circle cx="195.5" cy="195.5" r="192" stroke="#F44869" stroke-width="7"/>
-									</svg>
-								</div>
-								<h4>Program <br />Management</h4>
-								<p>Predictable, on-time delivery led by our agile blockchain engineering teams minimize learning curves.</p>
-							</div>
-						</div>
-						<div class="col col-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-							<div class="item">
-								<div class="logo" data-aos="fade-in" data-aos-delay="350">
-									<svg width="84" viewBox="0 0 461 458" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M64 101L119.426 133V197L64 229L8.57438 197V133L64 101Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M64 229L119.426 261V325L64 357L8.57438 325V261L64 229Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M118 197L173.426 229V293L118 325L62.5744 293V229L118 197Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M231 197L286.426 229V293L231 325L175.574 293V229L231 197Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M342 197L397.426 229V293L342 325L286.574 293V229L342 197Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M118 133L173.426 165V229L118 261L62.5744 229V165L118 133Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M231 133L286.426 165V229L231 261L175.574 229V165L231 133Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M342 133L397.426 165V229L342 261L286.574 229V165L342 133Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M175 101L230.426 133V197L175 229L119.574 197V133L175 101Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M175 229L230.426 261V325L175 357L119.574 325V261L175 229Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M175 293L230.426 325V389L175 421L119.574 389V325L175 293Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M175 37L230.426 69V133L175 165L119.574 133V69L175 37Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M286 101L341.426 133V197L286 229L230.574 197V133L286 101Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M286 229L341.426 261V325L286 357L230.574 325V261L286 229Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M286 293L341.426 325V389L286 421L230.574 389V325L286 293Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M286 37L341.426 69V133L286 165L230.574 133V69L286 37Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M231 5L286.426 37V101L231 133L175.574 101V37L231 5Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M231 325L286.426 357V421L231 453L175.574 421V357L231 325Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M397 101L452.426 133V197L397 229L341.574 197V133L397 101Z" stroke="#37BBE6" stroke-width="7"/>
-										<path d="M397 229L452.426 261V325L397 357L341.574 325V261L397 229Z" stroke="#37BBE6" stroke-width="7"/>
-									</svg>
-								</div>
-								<h4>Co-Investment</h4>
-								<p>Direct capital investment and introductions to strategic co-investors to ensure best-in-class support to our portfolio.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="portfolio">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<h2 data-aos="fade-up">Our Portfolio</h2>
-						</div>
-					</div>
-				</div>
-				<div class="list">
-					<div class="item" data-aos="fade-in">
-						<div class="container">
-							<div class="row">
-								<div class="col col-12 col-md-6">
-									<div class="logo" data-aos="fade-right" data-aos-delay="200">
-										<img src="img/logo-panther.png">
-									</div>
-								</div>
-								<div class="col col-12 col-md-6">
-									<div class="text" data-aos="fade-left" data-aos-delay="200">
-										<h3>Panther <br />Protocol</h3>
-										<p>An an end-to-end privacy solution, connecting Layer1s, facilitating private crosschain swaps, and enabling legacy institutions and fintechs to join the DeFi revolution.</p>
-										<p><a href="https://www.pantherprotocol.io/" class="button_alt" target="_blank">Read more</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="item" data-aos="fade-in">
-						<div class="container">
-							<div class="row">
-								<div class="col col-12 col-md-6">
-									<div class="logo" data-aos="fade-left" data-aos-delay="200">
-										<img src="img/logo-panther.png">
-									</div>
-								</div>
-								<div class="col col-12 col-md-6">
-									<div class="text" data-aos="fade-right" data-aos-delay="200">
-										<h3>DEX</h3>
-										<p>A private, low latency, low fees, compliant DEX built on Panther, with whitelisted pools, federated pool governance, and cross-chain capabilities.  </p>
-										<p><a href="#" class="button_alt">Read more</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="leadership">
-				<div class="big_planets_deco">
-					<i class="planet_1" data-aos="fade-up-left"></i>
-					<i class="planet_2" data-aos="fade-up-left" data-aos-delay="100"></i>
-					<i class="planet_3" data-aos="fade-up-left" data-aos-delay="200"></i>
-					<i class="line_1"></i>
-					<i class="line_2"></i>
-				</div>
-				<div class="container">
-					<div class="row flex-lg-row-reverse">
-						<div class="col col-12 col-lg-6">
-							<h2 data-aos="fade-up">Experienced Leadership</h2>
-							<p data-aos="fade-up">Management and technical teams with demonstrated success accross Zero Knowledge, Decentralized and Traditional Finance and a passion for turning bleeding edge technologies into new products and paradigms. </p>
-							<p data-aos="fade-up"><a href="./team.html" class="button">Meet the team</a></p>
-						</div>
-						<div class="col col-12 col-lg-6">
-							<div class="row logos">
-								<div class="col col-6" data-aos="fade-in">
-									<a href="#">
-										<img src="img/logo-etherium.svg">
-									</a>
-								</div>
-								<div class="col col-6" data-aos="fade-in" data-aos-delay="100">
-									<a href="#">
-										<img src="img/logo-blackrock.svg">
-									</a>
-								</div>
-								<div class="col col-6" data-aos="fade-in">
-									<a href="#">
-										<img src="img/logo-ripple.svg">
-									</a>
-								</div>
-								<div class="col col-6" data-aos="fade-in" data-aos-delay="100">
-									<a href="#">
-										<img src="img/logo-accenture.svg">
-									</a>
-								</div>
-								<div class="col col-6" data-aos="fade-in">
-									<a href="#">
-										<img src="img/logo-ocean.svg">
-									</a>
-								</div>
-								<div class="col col-6" data-aos="fade-in" data-aos-delay="100">
-									<a href="#">
-										<img src="img/logo-hsbc.svg">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="join_us">
-				<div class="container">
-					<div class="row flex-md-row-reverse">
-						<div class="col col-md-6" data-aos="fade-in">
-							<div class="deco" data-aos="planets-anim" data-aos-delay="500">
-								<i class="planet_1"><i></i></i>
-								<div class="small_planets_wrapper">
-									<i class="planet_2"></i>
-									<i class="planet_3"></i>
-								</div>
-							</div>
-						</div>
-						<div class="col col-12 col-md-6">
-							<h3 data-aos="fade-up">We are hiring <br />world-class talent.<br/ > Explore our open positions.</h3>
-							<p data-aos="fade-up"><a href="./careers.html" class="button">Join us</a></p>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col" data-aos="fade-in">
-						<a href="/" class="logo">
-							<img src="img/logo.svg">
-						</a>
-						<p>© 2021 Stelium Ventures</p>
-					</div>
-				</div>
+          <br><br>
+<span>Sign up for development news:</span><br><br><br>
+         <!-- <div><img src="_pics/signup.png" alt="Wiresphere" class="himg" /> </div>  -->
+         <div class="stelium-input" >
+          <input placeholder="Email Address" autocomplete="off" name="email" type="email" />
+          <button> Register </button> 
+        </div>
 			</div>
-		</footer>
-	</div>
-</body>
+
+
+    <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/three.min.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/controls/OrbitControls.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/LoaderSupport.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/OBJLoader2.js"></script>
+  <script src="https://threejsfundamentals.org/threejs/resources/threejs/r105/js/loaders/MTLLoader.js"></script>
+
+      <script src="_assets/jquery-2.2.4.min.js"></script>
+		  <script src="https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXX"></script>
+	    <script src="config.js"></script>
+	    <script src="_assets/three.min.js"></script>
+	    <script src="_assets/three.canvas-renderer.min.js"></script>
+	    <script src="_assets/three.projector.min.js"></script>
+	    <script src="_assets/wiresphere.3danim.js"></script>
+	    <script src="_assets/wiresphere.js"></script>
+
+
+
+
+
+
+    </body>
 </html>
